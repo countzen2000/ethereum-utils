@@ -4,10 +4,10 @@ import collections
 
 
 if sys.version_info.major == 2:
-    integer_types = (int, long)  # noqa: F821
+    integer_types = (int, long, 'uint8', 'uint256')  # noqa: F821
     bytes_types = (bytes, bytearray)
     text_types = (unicode,)  # noqa: F821
-    string_types = (basestring, bytearray)  # noqa: F821
+    string_types = (basestring, bytearray, bytes, 'bytes32')  # noqa: F821
 else:
     integer_types = (int,)
     bytes_types = (bytes, bytearray)
